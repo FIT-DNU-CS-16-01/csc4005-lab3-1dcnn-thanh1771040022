@@ -1,0 +1,73 @@
+{
+  "config": "configs/baseline_mfcc_1dcnn.json",
+  "data_dir": "D:\\HocSau1 (1)\\UrbanSound8K",
+  "project": "csc4005-lab3-urbansound-1dcnn",
+  "run_name": "1771040022_logmel_1dcnn",
+  "model_name": "logmel_1dcnn",
+  "feature_type": "logmel",
+  "sample_rate": 16000,
+  "duration": 4.0,
+  "n_fft": 1024,
+  "hop_length": 512,
+  "n_mfcc": 40,
+  "n_mels": 64,
+  "hidden_channels": [
+    64,
+    128,
+    128
+  ],
+  "dropout": 0.35,
+  "optimizer": "adamw",
+  "scheduler": "plateau",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "epochs": 12,
+  "batch_size": 32,
+  "patience": 4,
+  "seed": 42,
+  "train_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "val_folds": [
+    9
+  ],
+  "test_folds": [
+    10
+  ],
+  "max_train_per_class": 120,
+  "max_eval_per_class": 50,
+  "augment": true,
+  "cache_dir": ".cache/features",
+  "num_workers": 0,
+  "device": "auto",
+  "use_wandb": true,
+  "wandb_mode": "online",
+  "num_classes": 10,
+  "class_names": [
+    "air_conditioner",
+    "car_horn",
+    "children_playing",
+    "dog_bark",
+    "drilling",
+    "engine_idling",
+    "gun_shot",
+    "jackhammer",
+    "siren",
+    "street_music"
+  ],
+  "device_resolved": "cpu",
+  "resolved_data_dir": "D:\\HocSau1 (1)\\UrbanSound8K",
+  "input_channels": 64,
+  "train_size": 1200,
+  "val_size": 463,
+  "test_size": 465,
+  "total_params": 145610,
+  "trainable_params": 145610
+}
